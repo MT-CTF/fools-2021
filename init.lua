@@ -21,7 +21,7 @@ minetest.register_node("april_fools_day:apple", {
 		leafdecay = 3, leafdecay_drop = 1, food_apple = 1},
         on_use = function(itemstack, player)
             local hp = player:get_hp()
-            player:set_hp(hp+math.random(-2, 2)) -- you may want to disclude 0, I think this atm will also allow no health to be given lol
+            player:set_hp(hp+math.random(-2, 2))
             itemstack:take_item()
             return itemstack
         end,
