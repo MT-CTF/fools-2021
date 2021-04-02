@@ -1,3 +1,7 @@
+local date = os.date("*t", os.time)
+
+if date.month ~= 4 or date.day ~= 1 then return end 
+
 ctf_match.register_on_new_match(function()
     minetest.sound_play({name="start_match"}, { gain = 1.0 })
 end)
